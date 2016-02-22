@@ -1,7 +1,7 @@
 Docker API binding in Elixir
 ===
 
-See the [Wiki](../../../elixir-docker/wiki) for setup notes.
+See the [Wiki](../../../elixir-docker/wiki) for configuration and integration notes.
 
 Warning: this ia a UNSTABLE version, and APIs could change very quickly.
 
