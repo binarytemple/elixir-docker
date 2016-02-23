@@ -1,19 +1,26 @@
 
-#export DOCKER_TLS_VERIFY="1"
-#export DOCKER_HOST="tcp://192.168.103.137:2376"
-#export DOCKER_CERT_PATH="/Users/bryanhunt/.docker/machine/machines/local"
-#export DOCKER_MACHINE_NAME="local"
-
 
 use Mix.Config
 
-
-
 config :docker,
-        base_url: "https://localhost:2376",
+        base_url: "",
         ssl_options: [
-          {:ca_file,  'docker.crt'},
-          {:cert_file,'docker.crt'},
-          {:key_file, 'ca.crt'},
+          {:ca_file,   ""},
+          {:cert_file, ""},
+          {:key_file,  ""},
         ],
-        machine_name: "local"
+        machine_name: ""
+
+
+#{:success, keylist} = DockerMachine.get_env
+#
+#m = Map.new(keylist)
+#
+#config :docker,
+#        base_url: m[:docker_host],
+#        ssl_options: [
+#          {:ca_file,   m[:docker_cert_path] <> "/docker.crt"},
+#          {:cert_file, m[:docker_cert_path] <> "/docker.crt"},
+#          {:key_file,  m[:docker_cert_path] <> "/ca.crt"},
+#        ],
+#        machine_name: m[:docker_machine_name]
