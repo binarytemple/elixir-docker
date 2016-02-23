@@ -3,7 +3,7 @@ defmodule DockerTest do
 
   setup do
     server = %{
-      baseUrl: "https://docker-06.lan.zhaowei.jimubox.com:2376",
+      baseUrl: "https://localhost:2376",
       ssl_options: [
         {:certfile, 'docker.crt'},
         {:keyfile, 'docker.key'},
@@ -40,5 +40,3 @@ defmodule DockerTest do
     assert :ok = Docker.Container.delete(ctx.conn, id)
   end
 end
-
-

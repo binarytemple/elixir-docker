@@ -75,7 +75,7 @@ defmodule Docker.PackedDecoder do
   def _decode(packet, acc) when byte_size(packet)<8 do
     {Enum.reverse(acc), packet}
   end
-  def _decode(packet, _acc) do
+  def _decode(_packet, _acc) do
     raise ArgumentError
   end
 

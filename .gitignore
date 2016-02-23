@@ -3,6 +3,7 @@
 erl_crash.dump
 *.ez
 mix.lock
-test.exs
 *.crt
 *.key
+.idea/
+docker.iml
