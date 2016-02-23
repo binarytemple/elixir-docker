@@ -1,9 +1,11 @@
 Docker API binding in Elixir
 ===
 
-Warining: this ia a UNSTABLE version, and APIs would be change quickly
+See the [Wiki](../../../elixir-docker/wiki) for configuration and integration notes.
 
-example:
+Warning: this ia a UNSTABLE version, and APIs could change very quickly.
+
+An example:
 ```elixir
 require Logger
 
